@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Year:</b>
+  <%= @state_crime.year %>
+</p>
+
+<p>
+  <b>Count:</b>
+  <%= @state_crime.count %>
+</p>
+
+<p>
+  <b>Crime:</b>
+  <%= @state_crime.crime %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @state_crime.state %>
+</p>
+
+
+<%= link_to 'Edit', edit_state_crime_path(@state_crime) %> |
+<%= link_to 'Back', state_crimes_path %>

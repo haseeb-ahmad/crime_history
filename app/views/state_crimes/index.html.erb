@@ -1,0 +1,31 @@
+<h1>Listing state_crimes</h1>
+
+<table>
+  <tr>
+    <th>Year</th>
+    <th>Count</th>
+    <th>Crime</th>
+    <th>Crime Type</th>
+    <th>State</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @state_crimes.each do |state_crime| %>
+  <tr>
+    <td><%= state_crime.year %></td>
+    <td><%= state_crime.count %></td>
+    <td><%= state_crime.crime.name %></td>
+    <td><%= state_crime.crime.crime_type.name %></td>
+    <td><%= state_crime.state.name %></td>
+    <td><%= link_to 'Show', state_crime %></td>
+    <td><%= link_to 'Edit', edit_state_crime_path(state_crime) %></td>
+    <td><%= link_to 'Destroy', state_crime, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New State crime', new_state_crime_path %>

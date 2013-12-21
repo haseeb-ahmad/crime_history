@@ -1,0 +1,23 @@
+<h1>Listing crime_types</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @crime_types.each do |crime_type| %>
+  <tr>
+    <td><%= crime_type.name %></td>
+    <td><%= link_to 'Show', crime_type %></td>
+    <td><%= link_to 'Edit', edit_crime_type_path(crime_type) %></td>
+    <td><%= link_to 'Destroy', crime_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Crime type', new_crime_type_path %>
